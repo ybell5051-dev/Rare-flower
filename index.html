@@ -1,95 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rare Flowers | Xtheflare - Soul Rock Album</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.1/tailwind.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTHEFLARE // RARE FLOWERS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0c;
+            color: #ffffff;
+            font-family: sans-serif;
+        }
 
-<style>
-  body { font-family: 'Inter', sans-serif; background-color: #030303; }
-  .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
-  
-  .noise-bg {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    pointer-events: none; z-index: 50; opacity: 0.04;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  }
+        /* Hero Header Section */
+        .hero-header {
+            width: 100%;
+        }
+        .hero-header img {
+            width: 100%;
+            display: block;
+        }
 
-  .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-  .reveal.active { opacity: 1; transform: translateY(0); }
-  .delay-100 { transition-delay: 100ms; }
-  .delay-200 { transition-delay: 200ms; }
+        /* Content Sections */
+        .content-section {
+            padding: 40px 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
 
-  .glass {
-    background: rgba(15, 15, 15, 0.4);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-  }
-</style>
+        .img-display {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #333;
+        }
+    </style>
 </head>
-<body class="text-white antialiased overflow-x-hidden selection:bg-red-600">
+<body>
 
-<div class="noise-bg"></div>
+    <!-- Hero Header: Using IMG_3892.jpeg as the full header design -->
+    <header class="hero-header">
+        <img src="assets/images/IMG_3892.jpeg" alt="Xtheflare Landing Header">
+    </header>
 
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-40 glass border-b-0 py-4 px-6" id="navbar">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
-    <a href="/" class="display text-3xl tracking-widest text-white">X<span class="text-[#39ff14]">theflare</span></a>
-    <a href="#join" class="border border-red-600 px-6 py-2 text-sm font-bold tracking-widest uppercase text-red-500 hover:text-white transition">Join the List</a>
-  </div>
-</nav>
+    <!-- Artist Section: Using IMG_0330.jpeg -->
+    <section class="content-section">
+        <img src="assets/images/IMG_0330.jpeg" alt="Xtheflare in truck" class="img-display">
+    </section>
 
-<!-- Hero Section -->
-<header class="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden pt-24 px-6">
-  <div class="absolute inset-0">
-    <!-- Updated path to use the images folder -->
-    <img src="images/image.png" alt="Xtheflare live performance" class="w-full h-full object-cover opacity-60 scale-105" />
-    <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/60 to-transparent"></div>
-  </div>
-  
-  <div class="relative z-10 max-w-5xl mx-auto">
-    <h2 class="text-[#39ff14] font-bold tracking-[0.5em] text-xs mb-6 uppercase reveal">A New Project By Xtheflare</h2>
-    <h1 class="display text-7xl md:text-[9rem] leading-none text-white uppercase reveal delay-100 drop-shadow-2xl">Rare Flowers</h1>
-    <p class="mt-8 text-xl md:text-3xl text-gray-200 uppercase tracking-widest font-light reveal delay-200">Bloom where they tried to <span class="text-[#39ff14] font-bold border-b-2 border-[#39ff14]">break you</span>.</p>
-  </div>
-</header>
+    <!-- Album Section: Using 226B7D86-1282-4FE6-8D02-0426694527CD.jpeg -->
+    <section class="content-section">
+        <h2>THE ALBUM</h2>
+        <img src="assets/images/226B7D86-1282-4FE6-8D02-0426694527CD.jpeg" alt="Rare Flowers Cover" class="img-display">
+    </section>
 
-<!-- Story Section -->
-<section id="story" class="py-32 px-6">
-  <div class="max-w-4xl mx-auto space-y-32">
-    <div class="text-center reveal">
-      <h2 class="display text-6xl text-white uppercase mb-8">One Story. Two Worlds.</h2>
-      <div class="h-1 w-24 bg-red-600 mx-auto"></div>
-    </div>
-
-    <div class="space-y-8 reveal text-center lg:text-left">
-      <p class="text-3xl font-medium tracking-wide leading-snug">There's a version of every song that starts before it's a song. Before the studio, before the mix — it's just a voice and a guitar and whatever I was going through. That's where Rare Flowers starts.</p>
-      <p class="text-xl text-gray-400 font-light">These songs came from a stretch where I was losing almost everything. What I never lost was the belief I had in myself. Like a flower breaking through concrete, each track is a piece of that growth. Soul Rock at its core: raw and unfiltered.</p>
-    </div>
-
-    <div class="space-y-8 reveal text-center lg:text-left">
-      <p class="text-3xl font-medium tracking-wide leading-snug">Right alongside it, there's The Frequency.</p>
-      <p class="text-xl text-gray-400 font-light">The AI-driven universe where Zeal Von Rebel and DJ Zuri Wave live. It's the other side of the coin—a full project of 10+ tracks of music, visuals, and an expanding cyberpunk narrative.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="py-20 text-center text-gray-600 text-xs tracking-widest uppercase">
-  <p>&copy; <span id="year"></span> Xtheflare. All rights reserved.</p>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const revealElements = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
-  }, { threshold: 0.1 });
-  revealElements.forEach(el => observer.observe(el));
-</script>
 </body>
 </html>
-
